@@ -1,0 +1,28 @@
+<meta>
+
+    <info author="Tron" name="Accounts Library" type="script" version="1.0.0"/>
+    <oop>true</oop>
+
+    <!-- Settings -->
+    <script src="settings/shared.lua" type="shared" cache="false"/>
+    <script src="settings/server.lua" type="server"/>
+
+    <!-- Utilities -->
+    <script src="utilities/server.lua" type="server"/>
+
+    <!-- Exports -->
+    <script src="exports/server.lua" type="server"/>
+
+    <!-- Params: getUserData(account_name, data) | Returns Data; Else false Boolean -->
+    <export function="getUserData" type="server"/>
+
+    <!-- Params: setUserData(account_name, data, value) | Returns Boolean -->
+    <export function="setUserData" type="server"/>
+
+    <!-- Params: addUserAccount(account_name) | Returns Boolean -->
+    <export function="addNewUser" type="server"/>
+
+    <!-- Params: delUserAccount(account_name) | Returns Boolean -->
+    <export function="delUserAccount" type="server"/>
+
+</meta>
