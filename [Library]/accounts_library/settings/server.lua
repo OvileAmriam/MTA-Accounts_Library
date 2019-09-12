@@ -17,7 +17,7 @@
 connection = {
 
     database = exports.mysql_library:getDatabase(),
-    tableName = "AccountData",
+    tableName = "accountdata",
     keyColumnName = "name"
 
 }
