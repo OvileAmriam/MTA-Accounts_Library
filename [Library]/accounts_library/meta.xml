@@ -22,7 +22,7 @@
     <export function="setUserData" type="server"/>
 
     <!-- Params: addUserAccount(account_name) | Returns Boolean -->
-    <export function="addNewUser" type="server"/>
+    <export function="addUserAccount" type="server"/>
 
     <!-- Params: delUserAccount(account_name) | Returns Boolean -->
     <export function="delUserAccount" type="server"/>
