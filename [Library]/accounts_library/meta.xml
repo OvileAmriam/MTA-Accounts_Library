@@ -27,4 +27,7 @@
     <!-- Params: delUserAccount(account_name) | Returns Boolean -->
     <export function="delUserAccount" type="server"/>
 
+    <!-- Params: getAllUserAccounts() | Returns Data; Else false Boolean -->
+    <export function="getAllUserAccounts" type="server"/>
+
 </meta>

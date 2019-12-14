@@ -10,39 +10,19 @@
 ----------------------------------------------------------------
 
 
--------------------------------------------------
---[[ Function: Verifies Player's Login State ]]--
--------------------------------------------------
-
-function isPlayerGuest(player)
-
-    if isGuestAccount(getPlayerAccount(player)) then
-        return true
-    else
-        return false
-    end
-    
-end
-
-
 ----------------------------------
 --[[ Event: On Resource Start ]]--
 ----------------------------------
 
 addEventHandler("onResourceStart", resource, function()
 
-    setTimer(function()
-        for i, j in ipairs(getElementsByType("player")) do
-            if not isPlayerGuest(j) then
-                local account = getPlayerAccount(j)
-                if account then
-                    local account_name = getAccountName(account)
-                    if account_name then
-                        addUserAccount(account_name)
-                    end
-                end
+    Timer(function()
+        for i, j in ipairs(Element.getAllByType("player")) do
+            local account = j:getAccount()
+            if account and not account:isGuest() then
+                addUserAccount(account:getName())
             end
-        end	
+        end
     end, 200, 1)
     
 end)
@@ -52,13 +32,10 @@ end)
 --[[ Event: On Player Login ]]--
 --------------------------------
 
-addEventHandler("onPlayerLogin", getRootElement(), function(_, theCurrentAccount)
+addEventHandler("onPlayerLogin", getRootElement(), function(_, account)
 
-    if theCurrentAccount then
-        local account_name = getAccountName(theCurrentAccount)
-        if account_name then
-            addUserAccount(account_name)
-        end
+    if account then
+        addUserAccount(account:getName())
     end
 
 end)

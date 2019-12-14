@@ -9,6 +9,24 @@
 ----------------------------------------------------------------
 
 
+------------------------------------------------
+--[[ Functions: Retrieves All User Accounts ]]--
+------------------------------------------------
+
+function getAllUserAccounts()
+
+    local query = connection.database:query("SELECT * FROM "..connection.tableName)
+    if not query then return false end
+
+    local result = query:poll(-1)
+    if query then
+        query:free()
+    end
+    return result
+
+end
+
+
 ---------------------------------------------
 --[[ Functions: Retrieves/Sets User Data ]]--
 ---------------------------------------------
