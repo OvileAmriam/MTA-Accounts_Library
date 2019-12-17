@@ -15,7 +15,7 @@
 
 function getAllUserAccounts()
 
-    local query = connection.database:query("SELECT * FROM "..connection.tableName)
+    local query = connection.database:query("SELECT * FROM `"..connection.tableName.."`")
     if not query then return false end
 
     local result = query:poll(-1)
@@ -51,13 +51,13 @@ end
 function addUserAccount(account_name)
 
     if not account_name or getUserData(account_name, connection.keyColumnName) then return false end
-    return connection.database:exec("INSERT INTO "..connection.tableName.." ("..connection.keyColumnName..") VALUES(?)", account_name)
+    return connection.database:exec("INSERT INTO `"..connection.tableName.."` (`"..connection.keyColumnName.."`) VALUES(?)", account_name)
 
 end
 
 function delUserAccount(account_name)
 
     if not account_name or not getUserData(account_name, connection.keyColumnName) then return false end
-    return connection.database:exec("DELETE FROM "..connection.tableName.." WHERE "..connection.keyColumnName.."='"..account_name.."'")
+    return connection.database:exec("DELETE FROM `"..connection.tableName.."` WHERE `"..connection.keyColumnName.."`='"..account_name.."'")
 
 end
