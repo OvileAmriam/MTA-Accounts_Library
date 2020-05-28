@@ -32,7 +32,7 @@ end)
 --[[ Event: On Player Login ]]--
 --------------------------------
 
-addEventHandler("onPlayerLogin", getRootElement(), function(_, account)
+addEventHandler("onPlayerLogin", root, function(_, account)
 
     if account then
         addUserAccount(account:getName())
