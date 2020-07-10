@@ -22,4 +22,4 @@ connection = {
 
 }
 
-connection.database:exec("CREATE TABLE IF NOT EXISTS `"..connection.tableName.."` (`"..connection.keyColumnName.."` VARCHAR(50) PRIMARY KEY)")
+connection.database:exec("CREATE TABLE IF NOT EXISTS `??` (`??` VARCHAR(50) PRIMARY KEY)", connection.tableName, connection.keyColumnName)

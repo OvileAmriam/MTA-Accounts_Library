@@ -1,6 +1,6 @@
 <meta>
 
-    <info author="Tron" name="Accounts Library" type="script" version="1.0.0"/>
+    <info author="Tron" name="Accounts Library" type="Library" version="1.0.0"/>
     <oop>true</oop>
 
     <include resource="mysql_library"/>

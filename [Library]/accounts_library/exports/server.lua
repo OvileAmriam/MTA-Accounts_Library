@@ -9,15 +9,14 @@
 ----------------------------------------------------------------
 
 
--------------------------------------------------
---[[ Functions: Retrieves All User's Account ]]--
--------------------------------------------------
+----------------------------------------
+--[[ Functions: Retrieves All Users ]]--
+----------------------------------------
 
 function getAllUserAccounts()
 
-    local query = connection.database:query("SELECT * FROM `"..connection.tableName.."`")
+    local query = connection.database:query("SELECT * FROM `??`", connection.tableName)
     if not query then return false end
-
     local result = query:poll(-1)
     if query then
         query:free()
@@ -27,9 +26,9 @@ function getAllUserAccounts()
 end
 
 
----------------------------------------------
---[[ Functions: Retrieves/Sets User Data ]]--
----------------------------------------------
+-----------------------------------------------
+--[[ Functions: Retrieves/Sets User's Data ]]--
+-----------------------------------------------
 
 function getUserData(account_name, data)
 
@@ -51,13 +50,15 @@ end
 function addUserAccount(account_name)
 
     if not account_name or getUserData(account_name, connection.keyColumnName) then return false end
-    return connection.database:exec("INSERT INTO `"..connection.tableName.."` (`"..connection.keyColumnName.."`) VALUES(?)", account_name)
+
+    return connection.database:exec("INSERT INTO `??` (`??`) VALUES(?)", connection.tableName, connection.keyColumnName, account_name)
 
 end
 
 function delUserAccount(account_name)
 
     if not account_name or not getUserData(account_name, connection.keyColumnName) then return false end
-    return connection.database:exec("DELETE FROM `"..connection.tableName.."` WHERE `"..connection.keyColumnName.."`='"..account_name.."'")
+
+    return connection.database:exec("DELETE FROM `??` WHERE `??`=?", connection.tableName, connection.keyColumnName, account_name)
 
 end
