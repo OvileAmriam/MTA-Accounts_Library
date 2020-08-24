@@ -4,8 +4,9 @@
 ***
 
 ### Keypoints:
-> An account management library inorder to maintain account datas. Requires mysql_library to work out! [https://github.com/OvileAmriam/MTA-Mysql_Library]
-
+> An account management library inorder to maintain account datas.
+### Dependencies:
+  - **mysql_library [https://github.com/OvileAmriam/MTA-Mysql_Library]**
 - ### Exports:
   - **Function:** _getUserData(account_name, data)_ **| Type:** _server_ **| Returns:** _data; else false bool_
   - **Function:** _setUserData(account_name, data, value)_ **| Type:** _server_ **| Returns:** _bool_
