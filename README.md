@@ -4,7 +4,7 @@
 ***
 
 ### Keypoints:
-> An account management library inorder to maintain account datas.
+> ***An account management library inorder to maintain account datas.***
 
 ### Dependencies:
   - **mysql_library [https://github.com/OvileAmriam/MTA-Mysql_Library]**
