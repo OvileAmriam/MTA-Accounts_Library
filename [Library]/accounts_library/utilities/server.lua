@@ -3,9 +3,9 @@
 --[[ Resource: Accounts Library
      Script: utilities: server.lua
      Server: -
-     Author: Tron
+     Author: OvileAmriam
      Developer: -
-     DOC: 07/09/2019 (Tron)
+     DOC: 07/09/2019 (OvileAmriam)
      Desc: Server Sided Utilities ]]--
 ----------------------------------------------------------------
 

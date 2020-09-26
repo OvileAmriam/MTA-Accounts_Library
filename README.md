@@ -1,6 +1,6 @@
 ***
 # Resource Name: Accounts Library
-## Developer(s): Tron
+## Developer(s): OvileAmriam
 ***
 
 ### Keypoints:
