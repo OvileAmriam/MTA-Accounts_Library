@@ -1,5 +1,5 @@
 ***
-# Resource Name: Accounts Library
+# Resource: Accounts Library
 ## Developer(s): OvileAmriam
 ***
 
