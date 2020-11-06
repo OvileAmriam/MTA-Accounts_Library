@@ -6,6 +6,8 @@
 ### Keypoints:
   :heavy_check_mark: **Eases out Account management.**
 
+  :heavy_check_mark: **Easy to understand & integrate APIs.**
+
   :heavy_check_mark: **Syncs Default Account w/ MySQL.**
 
   :heavy_check_mark: **Syncs Account's Datas w/ MySQL.**
