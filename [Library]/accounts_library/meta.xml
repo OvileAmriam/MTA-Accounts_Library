@@ -8,11 +8,9 @@
     <!-- Exports -->
     <script src="exports/server.lua" type="server"/>
 
-    <!-- Settings -->
+    <!-- Settings & Utilities -->
     <script src="settings/shared.lua" type="shared" cache="false"/>
     <script src="settings/server.lua" type="server"/>
-
-    <!-- Utilities -->
     <script src="utilities/server.lua" type="server"/>
 
     <!-- Params: getUserData(account_name, data) | Returns Data; Else false Boolean -->
