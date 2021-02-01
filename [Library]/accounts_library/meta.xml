@@ -4,16 +4,16 @@
     <oop>true</oop>
 
     <include resource="mysql_library"/>
-    
+
+    <!-- Exports -->
+    <script src="exports/server.lua" type="server"/>
+
     <!-- Settings -->
     <script src="settings/shared.lua" type="shared" cache="false"/>
     <script src="settings/server.lua" type="server"/>
 
     <!-- Utilities -->
     <script src="utilities/server.lua" type="server"/>
-
-    <!-- Exports -->
-    <script src="exports/server.lua" type="server"/>
 
     <!-- Params: getUserData(account_name, data) | Returns Data; Else false Boolean -->
     <export function="getUserData" type="server"/>
